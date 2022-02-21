@@ -23,7 +23,9 @@ The interface is a local website I built, hosted via apache2. Data from sensors 
 
 ## Setup
 Everything in "pi" folder needs to be placed in home directory - /home/pi by default
-Web page, which is in html folder needs to be placed in apache website directory - /var/www/html by default
+
+Web page, which is in "html" folder needs to be placed in apache website directory - /var/www/html by default
+
 PiGarden-Database.sql is my database schema dump. Database from this file must be created on MariaDB engine.
 
 ## Hardware
