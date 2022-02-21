@@ -10,7 +10,7 @@ Users can manually controll all those functions using simple interface to which 
 * [Hardware](#hardware)
 
 ## General info
-This project is based on Raspberry Pi 3B. I designed and built expansion board so my raspberry can easily controll LED strips and water pump and communicate with sensors, which are:
+This project is based on Raspberry Pi 3B. I designed and built expansion board so my raspberry can easily controll LED strips, water pump and communicate with sensors, which are:
 * SEN0193 - capacitive soil moisture sensors
 * DHT11 - ambient temperature and air humidity sensor
 
@@ -22,8 +22,9 @@ The interface is a local website I built, hosted via apache2. Data from sensors 
  3. [ChartJS](https://www.chartjs.org/)
 
 ## Setup
-All scripts needs to be placed in home directory in Raspbian system.
+Everything in "pi" folder needs to be placed in home directory - /home/pi by default
 Web page, which is in html folder needs to be placed in apache website directory - /var/www/html by default
+PiGarden-Database.sql is my database schema dump. Database from this file must be created on MariaDB engine.
 
 ## Hardware
 ### Design

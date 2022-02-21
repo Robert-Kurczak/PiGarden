@@ -1,0 +1,227 @@
+/*******************Global******************/
+@font-face{
+    font-family: "PoppinsLight";
+    src: url("../fonts/Poppins-Light.woff2");
+}
+
+body{
+    font-family: PoppinsLight;
+    background-color: black;
+    margin: 0;
+}
+/*******************************************/
+
+
+/****************Values box****************/
+#upper_body{
+    display: flow-root;
+    margin-top: 10%;
+}
+
+#info{
+    margin-left: 1%;
+    width: 20%;
+    float: left;
+}
+
+#info div{
+    margin-bottom: 20%;
+}
+
+.info_stripes{
+    background-color: white;
+    width: 110%;
+    margin-left: -3%;
+    height: 1px;
+
+    animation: 0.8s ease-out 0s 1 EntryStripesAnimation;
+}
+
+@keyframes EntryStripesAnimation{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 110%;
+    }
+}
+/*******************************************/
+
+
+/***************Values labels**************/
+p{
+    color: white;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 4%;
+    width: 100%;
+}
+/******************************************/
+
+
+/****************Moisture box***************/
+#moisture{
+    width: 115%;
+    position: relative;
+}
+
+#moisture p{
+    width: 87%;
+}
+
+#moisture .info_stripes{
+    margin-bottom: 10%;
+}
+/*******************************************/
+
+
+/******************Values*******************/
+.values{
+    color: white;
+    float: right;
+    margin-left: 10%;
+}
+
+#sensors_values{
+    width: 71%;
+    margin-left: -85%;
+    transition-duration: 0.5s;
+    position: absolute;
+}
+
+#sensors_values div{
+    margin-bottom: 10%;
+}
+/*******************************************/
+
+
+/******Dropdown Menu Navigation Arrow*******/
+#sensor_arrow{
+    width: 10%;
+    margin-top: -13px;
+    margin-left: -19px;
+    margin-right: -15px;
+    float: right;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#sensor_arrow:hover{
+    fill:   #F0982A;
+}
+/*******************************************/
+
+
+/**************Toggle Switches**************/
+#switches{
+    float: right;
+    width: 17%;
+}
+
+.switch_holder{
+    margin-bottom: 15%;
+}
+
+.switch{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 24px;
+    float: left;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.slider{
+    display: inline-block;
+    position: absolute;
+    transition-duration: 0.3s;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    top: 2px;
+    left: 3px;
+}
+
+.switch_label{
+    width: auto;
+    margin-left: 15%;
+    margin-bottom: 0;
+}
+
+#measure_button{
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+    margin-top: -1%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    overflow: hidden;
+    float: left;
+}
+
+#measure_button:focus{
+    outline: none;
+}
+
+#measure_button:hover{
+    box-shadow: 0px 0px 10px 2px #F03458, 0px 0px 10px 4px #BC2387 inset;
+}
+
+#measure_label{
+    width: auto;
+    margin-left: 24%;
+    transition-duration: 0.8s;
+}
+/*******************************************/
+
+
+/*******************Pi Data*****************/
+#pi_data{
+    float: left;
+    margin-left: 1%;
+    width: 20%;
+    margin-top: 3.5%;
+    transition-duration: 0.3s;
+}
+
+#pi_logo{
+    width: 20px;
+    position: absolute;
+    left: 7em;
+}
+
+#pi_data_label{
+    margin-bottom: 10%;
+    position: relative;
+}
+
+#pi_data p{
+    margin-bottom: 7%;
+}
+
+.pi_data_values{
+    font-size: 90%;
+}
+/*******************************************/
+
+
+/*******************Charts******************/
+#charts{
+    margin-top: 6%;
+}
+
+.chart{
+    position: relative;
+    margin-right: 5%;
+    width: 30%;
+    float: right;
+}
+/******************************************/
