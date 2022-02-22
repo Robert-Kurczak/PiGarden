@@ -51,6 +51,10 @@ On the bottom, there are 2 charts where you can keep track of changes in ambient
  4. [ChartJS](https://www.chartjs.org/)
 
 ## Setup
+Install apache2 server nad MariaDB service
+
+Configure IP addresses of raspbery pi, gateway and DNS in /etc/dhcpcd.conf
+
 Everything in "etc" folder need to be placed in /etc/
 
 Everything in "pi" folder need to be placed in home directory - /home/pi by default
