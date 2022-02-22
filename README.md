@@ -15,7 +15,7 @@ This project is based on Raspberry Pi 3B. I designed and built expansion board s
 * SEN0193 - capacitive soil moisture sensors
 * DHT11 - ambient temperature and air humidity sensor
 
-The interface is a local website I built, hosted via apache2. Data from sensors is stored in local database hosted on mariaDB engine.
+The interface is a local website hosted via apache2. Data from sensors is stored in local database hosted on mariaDB engine.
 
 ## Interface
 <img src="/Images/Interface.png" alt="Interface screenshot" width="1000">
@@ -24,20 +24,20 @@ One the left side, you can see:
 * value of the last air humidity measurement
 * value of soil moisture which is average of most recent measurements from each sensor. You can see the value of individual sensors by pressing small arrow, next to label.
 
-<br><br>
+<br>
 
 Below, you can see current Raspberry Pi data, which is:
 * CPU temperature
 * System uptime
 * OS version
 
-<br><br>
+<br>
 
 On the right side there are 2 sliders and 1 button. Using sliders, you can manually turn on/off water pump and lights. Button makes system takes measurements of all sensors and update displayed values.
 
 If the soil moisture drops below certain treshold that you can controll in SEN0193_config.ini (30% by default) you will get alert that let you choose to water plant now or ignore it now.
 
-<br><br>
+<br>
 
 On the bottom, there are 2 charts where you can keep track of changes in ambient temperature and humidity.
 
