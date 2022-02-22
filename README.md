@@ -19,6 +19,7 @@ The interface is a local website hosted via apache2. Data from sensors is stored
 
 ## Interface
 <img src="/Images/Interface.png" alt="Interface screenshot" width="1000">
+
 One the left side, you can see:
 * value of the last ambient temperature measurement
 * value of the last air humidity measurement
@@ -69,6 +70,6 @@ In SEN0193_config.ini you can configure soil moisture sensors. The options are:
  <img src="/Images/IMG_2.jpg" alt="PiGarden board picture 2" height="250">
  <img src="/Images/IMG_3.jpg" alt="PiGarden board picture 3" height="250">
  <img src="/Images/IMG_4.jpg" alt="Expansion board front" height="250">
- <img src="/Images/IMG_5.jpeg" alt="Expansion board back" height="250">
- <img src="/Images/IMG_6.jpeg" alt="Pump" height="250">
+ <img src="/Images/IMG_5.jpg" alt="Expansion board back" height="250">
+ <img src="/Images/IMG_6.jpg" alt="Pump" height="250">
 </p>
