@@ -62,7 +62,7 @@ In SEN0193_config.ini you can configure soil moisture sensors. The options are:
 * treshold - value in % below which this sensor will "assume" it's too dry
 
 ## Hardware
-<img src="/Images/Expansion_Board_PCB.png" alt="Expansion board PCB" width="1000">
+<img src="/Images/Expansion_Board_PCB.png" alt="Expansion board PCB" width="750">
 
 ### Few pictures
 <p>
