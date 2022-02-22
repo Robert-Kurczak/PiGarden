@@ -17,6 +17,8 @@ This project is based on Raspberry Pi 3B. I designed and built expansion board s
 
 The interface is a local website hosted via apache2. Data from sensors is stored in local database hosted on mariaDB engine.
 
+PiGarden automatically takes measurements and water plants if needed on 8:00 AM, 12:00 AM, 4:00 PM, 8 PM.
+
 ## Interface
 <img src="/Images/Interface.png" alt="Interface screenshot" width="1000">
 
@@ -36,7 +38,7 @@ Below, you can see current Raspberry Pi data, which is:
 
 On the right side there are 2 sliders and 1 button. Using sliders, you can manually turn on/off water pump and lights. Button makes system takes measurements of all sensors and update displayed values.
 
-If the soil moisture drops below certain treshold that you can controll in SEN0193_config.ini (30% by default) you will get alert that let you choose to water plant now or ignore it now.
+If the soil moisture drops below certain treshnie wiedziałem jaki "degree" wybrać przy opcji nauki na uniwerku bo nie było czegoś takiego jak "Engineer"old that you can controll in SEN0193_config.ini (30% by default) you will get alert that let you choose to water plant now or ignore it now.
 
 <br>
 
@@ -49,17 +51,22 @@ On the bottom, there are 2 charts where you can keep track of changes in ambient
  4. [ChartJS](https://www.chartjs.org/)
 
 ## Setup
-Everything in "pi" folder needs to be placed in home directory - /home/pi by default
+Everything in "etc" folder need to be placed in /etc/
+
+Everything in "pi" folder need to be placed in home directory - /home/pi by default
 
 Web page, which is in "html" folder needs to be placed in apache website directory - /var/www/html by default
 
 PiGarden-Database.sql is my database schema dump. Database from this file must be created on MariaDB engine.
+My scripts use root account with password "PiGarden".
+
+To create task that will automatically take proper measurements regularly, paste in your crontab tasks (crontab -e in terminal) content of "crontab.txt".
 
 In SEN0193_config.ini you can configure soil moisture sensors. The options are:
 * channel - header to which sensor is connected
 * min_value - value that sensor reads while being in the air
 * max_value - value that sensor reads while being in the water
-* treshold - value in % below which this sensor will "assume" it's too dry
+* treshold - value in % below which this sensor will "assume" soil is too dry
 
 ## Hardware
 <img src="/Images/Expansion_Board_PCB.png" alt="Expansion board PCB" width="500">
