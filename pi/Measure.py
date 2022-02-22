@@ -5,7 +5,7 @@ from Pump import water_pump
 import mariadb
 from datetime import datetime
 import json
-from os import popen
+from time import sleep
 
 def take_measure(auto_wtr=True):
 	indicator_diode.blink(2, 0.5)
@@ -103,7 +103,9 @@ def take_measure(auto_wtr=True):
 
 	#watering if needed
 	if auto_wtr and all(under_treshold):
-		water_pump.pump(40)
+		water_pump.pump(5)
+		sleep(4)
+		water_pump.pump(5)
 		change_state("watered")
 		print("Ogród został podlany.")
 	
