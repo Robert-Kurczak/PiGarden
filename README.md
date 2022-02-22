@@ -6,6 +6,7 @@ Users can manually controll all those functions using simple interface to which 
 ## Table of Contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [Interface](#interface)
 * [Setup](#setup)
 * [Hardware](#hardware)
 
@@ -16,26 +17,56 @@ This project is based on Raspberry Pi 3B. I designed and built expansion board s
 
 The interface is a local website I built, hosted via apache2. Data from sensors is stored in local database hosted on mariaDB engine.
 
+## Interface
+<img src="/Images/Interface.png" alt="Interface screenshot" width="1000">
+One the left side, you can see:
+* value of the last ambient temperature measurement
+* value of the last air humidity measurement
+* value of soil moisture which is average of most recent measurements from each sensor. You can see the value of individual sensors by pressing small arrow, next to label.
+
+<br><br>
+
+Below, you can see current Raspberry Pi data, which is:
+* CPU temperature
+* System uptime
+* OS version
+
+<br><br>
+
+On the right side there are 2 sliders and 1 button. Using sliders, you can manually turn on/off water pump and lights. Button makes system takes measurements of all sensors and update displayed values.
+
+If the soil moisture drops below certain treshold that you can controll in SEN0193_config.ini (30% by default) you will get alert that let you choose to water plant now or ignore it now.
+
+<br><br>
+
+On the bottom, there are 2 charts where you can keep track of changes in ambient temperature and humidity.
+
 ## Technologies
- 1. [DHT11 library](https://github.com/szazo/DHT11_Python)
- 2. [Adafruit MCP3008 library](https://learn.adafruit.com/mcp3008-spi-adc/python-circuitpython)
- 3. [ChartJS](https://www.chartjs.org/)
+ 1. Raspbian buster 10
+ 2. [DHT11 library](https://github.com/szazo/DHT11_Python)
+ 3. [Adafruit MCP3008 library](https://learn.adafruit.com/mcp3008-spi-adc/python-circuitpython)
+ 4. [ChartJS](https://www.chartjs.org/)
 
 ## Setup
 Everything in "pi" folder needs to be placed in home directory - /home/pi by default
 Web page, which is in html folder needs to be placed in apache website directory - /var/www/html by default
 PiGarden-Database.sql is my database schema dump. Database from this file must be created on MariaDB engine.
 
+In SEN0193_config.ini you can configure soil moisture sensors. The options are:
+* channel - header to which sensor is connected
+* min_value - value that sensor reads while being in the air
+* max_value - value that sensor reads while being in the water
+* treshold - value in % below which this sensor will "assume" it's too dry
+
 ## Hardware
-### Design
-<img src="/Images/Expansion_Board_Schematic.png" alt="Expansion board schematic" width="1000">
+<img src="/Images/Expansion_Board_PCB.png" alt="Expansion board PCB" width="1000">
 
 ### Few pictures
 <p>
- <img src="/Images/IMG_1.jpg" alt="Expansion board picture 1" height="250">
- <img src="/Images/IMG_2.jpg" alt="Expansion board picture 2" height="250">
- <img src="/Images/IMG_3.jpg" alt="Expansion board picture 3" height="250">
- <img src="/Images/IMG_4.jpg" alt="Expansion board picture 4" height="250">
- <img src="/Images/IMG_5.jpeg" alt="Expansion board picture 5" height="250">
- <img src="/Images/IMG_6.jpeg" alt="Expansion board picture 6" height="250">
+ <img src="/Images/IMG_1.jpg" alt="PiGarden picture 1" height="250">
+ <img src="/Images/IMG_2.jpg" alt="PiGarden board picture 2" height="250">
+ <img src="/Images/IMG_3.jpg" alt="PiGarden board picture 3" height="250">
+ <img src="/Images/IMG_4.jpg" alt="Expansion board front" height="250">
+ <img src="/Images/IMG_5.jpeg" alt="Expansion board back" height="250">
+ <img src="/Images/IMG_6.jpeg" alt="Pump" height="250">
 </p>
