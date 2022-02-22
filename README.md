@@ -49,7 +49,9 @@ On the bottom, there are 2 charts where you can keep track of changes in ambient
 
 ## Setup
 Everything in "pi" folder needs to be placed in home directory - /home/pi by default
-Web page, which is in html folder needs to be placed in apache website directory - /var/www/html by default
+
+Web page, which is in "html" folder needs to be placed in apache website directory - /var/www/html by default
+
 PiGarden-Database.sql is my database schema dump. Database from this file must be created on MariaDB engine.
 
 In SEN0193_config.ini you can configure soil moisture sensors. The options are:
